@@ -1,0 +1,74 @@
+(1) Listing commands 
+ls => listing the given path
+ls -al => listing with hidden file
+ls -la => show the user and group
+ls -lu => sort by access time
+ls -LS => sort by size
+ls -lt => modification time 
+ls -1 => one file per line
+ls *.txt => display all .txt extension files
+
+(2) Directory Command
+cd ~ => changes dir
+cd /etc/(file or folder) => change dir to path
+cd .. => back to previous dir
+pwd => current dir
+mkdir => make dir
+rmdir => remove dir
+mkdir -p /web/demo/test => create dir in this path
+
+
+(3) Files Command
+cat (file_name) => display the content of the file
+cat -b (file_name) => display the content of the file with line number
+cat (file_name) (file_name) => display the content of the multiple file
+cat>(file_name) => create file in current path
+wc (file_name) => count words , lines
+wc -i (file_name) => count lines
+wc -i (file_name) => count words
+wc -m (file_name) => count letters
+cp (file1) (file2) => copy for file1 to file2
+mv (file1) (file2) => rename and move from file1 to file2
+rm (file) => remove file
+rm -r (file) => remove file or folder with their sub folder or file
+rm -f (file) => remove file forcefully.
+rm -i (file) => remove file with confirmation every time.
+rm -l (file) => remove file with confirmation single time.
+ln -s (file) (link file name) => Create links of file
+touch (file_name) => create file if not available and update time stamp
+touch -a (file_name) => change the access time
+touch -m (file_name) => change the modification time
+more (file_name) => show more and more data of file
+more (5-num) (file_name) => show entered number lines
+less (file) => similar to more
+head (file) => show 10 line  (default)
+head -(3-num) (file) => show 3 line (give number)
+tail (file) => show last 10 line  (default)
+tail -(3-num) (file) => show last 3 line (give number)
+tail -f (file_name) => can add data directly in file
+diff (file1) (file2) => differance bt two files
+diff -c (file1) (file2) => differance in context mode
+diff -u (file1) (file2) => differance in unified mode
+diff -y (file1) (file2) => differance in side by side
+
+(4) Permission commands
+chmod (perm-num) (file_name)  => change the Permission of file
+chown (userName) (file_name) => change the ownship of file
+chown :mygroup sample => ----------------------need to ask-------------
+chown user1:mygroup file.txt => ----------------------need to ask-------------
+chmod -R user1:mygroup /var/www/html => ----------------------need to ask-------------
+
+(5) Process Management Command
+ps => current Process
+ps -eF => show all Process of system
+top => show all running Process
+kill (process_id) => kill the Process using process_id
+
+(6) Compression Command
+gzip (file_name) => compress the orignal file (.gz extension)
+gzip -f (file_name) => compress the even if already exists and remove orignal file
+gzip -k (file_name) => compress the orignal file nd keep the orignal file as it is.
+gunzip (file_name) => decompress the file
+gzip -[1-9] (file_name) => compress nd change the permission
+gzip -v (file_name) => compress nd decompress percentage of file
+gzip -d (compressed_file) => decompress and delete
